@@ -196,6 +196,11 @@ class BlockGenerator {
   }
 
   getBlockTypeFromTagName(tagName: string): string {
+
+    if (this.options && this.options.blockTypes && this.options.blockTypes[tagName]) {
+      return this.options.blockTypes[tagName];
+    }
+
     switch (tagName) {
       case 'li': {
         let parent = this.blockStack.slice(-1)[0];

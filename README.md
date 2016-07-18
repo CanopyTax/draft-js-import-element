@@ -29,6 +29,11 @@ You can optionally pass a second `Object` argument to `stateFromElement` with th
           elementStyles: {
             // Support `<sup>` (superscript) tag as style:
             'sup': 'SUPERSCRIPT'
+          },
+
+          blockTypes: {
+            // support `<left>` as a custom block type `leftAlign`
+            'left': 'leftAlign'
           }
         });
 
